@@ -4,18 +4,21 @@ import java.util.List;
 
 import com.umair.app.student_courses.model.Course;
 import com.umair.app.student_courses.repository.CourseRepository;
+import com.umair.app.student_courses.view.CourseView;
 
 public class CourseController {
 
 	private CourseRepository courseRepository;
+	private CourseView courseView;
 	
-	public CourseController(CourseRepository courseRepository) {
+	public CourseController(CourseRepository courseRepository,CourseView courseView) {
 		super();
 		this.courseRepository = courseRepository;
+		this.courseView = courseView;
 	}
-	public List<Course> getAllCourses() {
+	public void getAllCourses() {
 		// TODO Auto-generated method stub
-		return courseRepository.getAllCourses();
+		courseView.showAllCourses(courseRepository.getAllCourses());
 	}
 
 }
