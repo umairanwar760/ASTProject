@@ -8,4 +8,8 @@ public interface CourseView {
 
 	void showAllCourses(List<Course> list);
 
+	void showRegisteredCourses(List<Course> list);
+
+	void showError(String errorMessage);
+
 }

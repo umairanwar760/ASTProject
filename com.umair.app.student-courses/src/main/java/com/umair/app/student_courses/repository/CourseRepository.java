@@ -8,4 +8,10 @@ public interface CourseRepository {
 
 	List<Course> getAllCourses();
 
+	Course getCourse(String courseId);
+
+	void registerCourse(String courseId, String studentId);
+
+	Course findRegisteredCourse(String courseId, String studentId);
+
 }
