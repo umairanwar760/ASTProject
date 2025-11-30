@@ -25,4 +25,3 @@ jobs:
     - name: Build with Maven
       run: mvn verify
       working-directory: com.umair.app.student-courses
-		 
